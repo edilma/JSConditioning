@@ -23,8 +23,7 @@
         element = document.createElement('div');
         element.innerText= day;
         document.body.appendChild(element);
-        
-        
+           
 
 
 
@@ -34,9 +33,57 @@
         document.body.appendChild(edilmasButton);
 
         let newTitle = 'New Title Page';
-        //edilmasButton = document.createElement('title');
-        //edilmasButton.innerText = message;
         document.title = newTitle;
+
+        function Greeting (firstName)
+        {
+            console.log('Hello '+ firstName);
+
+        }
+        //Greeting('Simon');
+        function toCentimires (number)
+        {
+            let result = number * 2.54;
+            console.log(result);
+
+        }
+        //toCentimires(100);
+
+        function toUpper (Arraystr)
+        {
+            let newArray = [];
+            Arraystr.forEach(element => {
+                let resultItem = element.toUpperCase();
+                newArray.push(resultItem);
+            });
+            
+            console.log(newArray);
+
+        }
+
+        myFamily=['damian','edilma','lily','david','nina'];
+        //console.log('Applying the upper function :');
+        //toUpper(myFamily);
+
+        function arrayDouble(array)
+        {
+            let arrayResult = [];
+            array.forEach(element =>{
+                arrayResult.push(element);
+                arrayResult.push(element);
+            });
+            console.log (arrayResult);
+
+        }
+        console.log('Applying the double the elements function :');
+        arrayDouble(myFamily);
+
+  
+
+       
+
+       
+
 
     </script>
 </body>

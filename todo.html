@@ -13,32 +13,18 @@
     let todo1 = 'Get Groceries';
     let todo2 = 'Wash car';
     let todo3 = 'Make dinner';
-    function addTodo(todoTitle){
+    let todos = ['Get Groceries', 'Wash Car','Make Dinner'];
+    todos.push ('Do Laundry');
+    
+    todos.forEach(function(todoTitle){
         let element = document.createElement('div');
         element.innerText= todoTitle;
         document.body.appendChild(element);
 
-    }
-
-    addTodo(todo1);
-    addTodo();
+    })
 
 
-    
 
-    element = document.createElement('div');
-    element.innerText= todo2;
-    document.body.appendChild(element);
-    
-    element = document.createElement('div');
-    element.innerText= todo3;
-    document.body.appendChild(element);
-
-
-    let message = 'Click Me Now ';
-        let edilmasButton = document.createElement('button');
-        edilmasButton.innerText=message;
-        document.body.appendChild(edilmasButton);
 
 </script>
 </body>
