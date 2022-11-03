@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Edilmas To do List</title>
+</head>
+<body>
+    <script>
+
+        let month = 'November';
+        let day = '3';
+        let year = '2022';
+
+        let element = document.createElement('div');
+        element.innerText= year;
+        document.body.appendChild(element);
+
+
+        element = document.createElement('div');
+        element.innerText= month;
+        document.body.appendChild(element);
+
+        element = document.createElement('div');
+        element.innerText= day;
+        document.body.appendChild(element);
+        
+        
+
+
+
+        let message = 'Click Me';
+        let edilmasButton = document.createElement('button');
+        edilmasButton.innerText = message;
+        document.body.appendChild(edilmasButton);
+
+        let newTitle = 'New Title Page';
+        //edilmasButton = document.createElement('title');
+        //edilmasButton.innerText = message;
+        document.title = newTitle;
+
+    </script>
+</body>
+</html>
