@@ -4,8 +4,12 @@
     <title>Edilmas To Do App</title>
 </head>
 <body>
+    <input id='todo-title' type="text"/>
     
-    <button>Press Me</button>
+    <button onclick=addTodo() >Add To Do </button>
+    <div id="todo-list">
+
+    </div>
    
   
   
@@ -14,14 +18,30 @@
     let todo2 = 'Wash car';
     let todo3 = 'Make dinner';
     let todos = ['Get Groceries', 'Wash Car','Make Dinner'];
-    todos.push ('Do Laundry');
-    
-    todos.forEach(function(todoTitle){
+        
+    render();
+
+    function addTodo(){
+        let textbox = document.getElementById('todo-title');
+        let title = textbox.value;
+        todos.push(title);
+        render();
+
+    }
+
+    function render()
+    {
+        //reset the list to be empty
+        document.getElementById('todo-list').innerHTML='';
+
+        todos.forEach(function(todoTitle){
         let element = document.createElement('div');
         element.innerText= todoTitle;
-        document.body.appendChild(element);
+        let todoList = document.getElementById('todo-list')
+        todoList.appendChild(element);
 
-    })
+    })    
+    }
 
 
 

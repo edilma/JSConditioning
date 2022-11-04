@@ -5,78 +5,158 @@
     <title>Edilmas To do List</title>
 </head>
 <body>
+
+    <!-- <button onclick="changeText()" id='todo-button'></button>
+    
+    <div id="counter">0</div>
+    <button onclick="countClick()" id='addONe'>Ad One</button>
+
+    <button onclick="countClick2()" id='DelOne'>Substract One</button> -->
+
+    <input type="text" id='info'/>
+    <button onclick="createDiv()">Create to Div</button>
+
+
+
+
+
+
+
+
+
     <script>
+        //let addText = document.getElementById('info');
+        
+        function createDiv()
+        {
+            let textbox2 = document.getElementById('info');
+            let title = textbox2.value;
+            
+            let element = document.createElement('div');
+            element.innerText = title;
 
-        let month = 'November';
-        let day = '3';
-        let year = '2022';
-
-        let element = document.createElement('div');
-        element.innerText= year;
-        document.body.appendChild(element);
+            document.body.appendChild(element);
+            console.log('new div has been created');
 
 
-        element = document.createElement('div');
-        element.innerText= month;
-        document.body.appendChild(element);
+        }
 
-        element = document.createElement('div');
-        element.innerText= day;
-        document.body.appendChild(element);
+
+
+
+
+        //     let addToCounter = document.getElementById('addONe');
+        //     let subToCounter = document.getElementById('DelOne');
+        //     let counterDisplay = document.getElementById('counter');
+        //     let count = 0;
+
+        // function updateDisplay(){
+        //     counterDisplay.innerHTML = count;
+        // }
+
+
+        // function countClick(){
+        //     count++;
+        //     updateDisplay()
+        // }
+        // function countClick2(){
+        //     count--;
+        //     updateDisplay()
+        // }
+
+
+        // function changeText( ){
+        //     let buttonTex = document.getElementById('todo-button');
+        //     buttonTex.innerText = 'Done';
+
+        // }
+
+
+
+
+        // let month = 'November';
+        // let day = '3';
+        // let year = '2022';
+
+        // let element = document.createElement('div');
+        // element.innerText= year;
+        // document.body.appendChild(element);
+
+
+        // element = document.createElement('div');
+        // element.innerText= month;
+        // document.body.appendChild(element);
+
+        // element = document.createElement('div');
+        // element.innerText= day;
+        // document.body.appendChild(element);
            
 
 
 
-        let message = 'Click Me';
-        let edilmasButton = document.createElement('button');
-        edilmasButton.innerText = message;
-        document.body.appendChild(edilmasButton);
+        // let message = 'Click Me';
+        // let edilmasButton = document.createElement('button');
+        // edilmasButton.innerText = message;
+        // document.body.appendChild(edilmasButton);
 
-        let newTitle = 'New Title Page';
-        document.title = newTitle;
+        // let newTitle = 'New Title Page';
+        // document.title = newTitle;
 
-        function Greeting (firstName)
-        {
-            console.log('Hello '+ firstName);
+        // function Greeting (firstName)
+        // {
+        //     console.log('Hello '+ firstName);
 
-        }
-        //Greeting('Simon');
-        function toCentimires (number)
-        {
-            let result = number * 2.54;
-            console.log(result);
+        // }
+        // //Greeting('Simon');
+        // function toCentimires (number)
+        // {
+        //     let result = number * 2.54;
+        //     console.log(result);
 
-        }
-        //toCentimires(100);
+        // }
+        // //toCentimires(100);
 
-        function toUpper (Arraystr)
-        {
-            let newArray = [];
-            Arraystr.forEach(element => {
-                let resultItem = element.toUpperCase();
-                newArray.push(resultItem);
-            });
+        // function toUpper (Arraystr)
+        // {
+        //     let newArray = [];
+        //     Arraystr.forEach(element => {
+        //         let resultItem = element.toUpperCase();
+        //         newArray.push(resultItem);
+        //     });
             
-            console.log(newArray);
+        //     console.log(newArray);
 
-        }
+        // }
 
-        myFamily=['damian','edilma','lily','david','nina'];
-        //console.log('Applying the upper function :');
-        //toUpper(myFamily);
+        // myFamily=['damian','edilma','lily','david','nina'];
+        // numbersArray = [1,5,8,9,14];
 
-        function arrayDouble(array)
-        {
-            let arrayResult = [];
-            array.forEach(element =>{
-                arrayResult.push(element);
-                arrayResult.push(element);
-            });
-            console.log (arrayResult);
 
-        }
-        console.log('Applying the double the elements function :');
-        arrayDouble(myFamily);
+        // //console.log('Applying the upper function :');
+        // //toUpper(myFamily);
+
+        // function arrayDouble(array)
+        // {
+        //     let arrayResult = [];
+        //     array.forEach(element =>{
+        //         arrayResult.push(element);
+        //         arrayResult.push(element);
+        //     });
+        //     console.log (arrayResult);
+
+        // }
+        // function arraySum (array){
+        //     let sum = 0;
+        //     array.forEach(element=> 
+        //     sum= sum + element);
+        //     console.log (sum);
+        // }
+
+        // // console.log('Applying the double the elements function :');
+        // // arrayDouble(myFamily);
+
+        // console.log('Usando the funcion arraySum :');
+        // arraySum(numbersArray);
 
   
 
