@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart exercise</title>
+</head>
+<body>
+    <div id="cart"></div>
+    <div>
+        <button id='apple'onclick=addDiv()>Apple</button>
+        <button id='tomato' onclick=addDiv()>Tomato</button>
+        <button id ='egg' onclick=addDiv()>Eggs</button>
+        <button id ='clear'onclick=clearDiv()>Clear</button>
+        <button id ='clearAll' onclick=clearAllDivs()>Clear All </button>
+    </div>
+    <script>
+        const groceries =['apple','tomato','egg','clear']
+        
+        // function that add a div when clicking a button
+        function addDiv()
+        {
+         const element = document.createElement('div');
+         const destination = document.getElementById('cart');
+         destination.append(element);
+         console.log('I appended a div');
+        }
+        // function that delete only one div when clicking a button
+        function clearDiv()
+        {
+            const element = document.getElementsByTagName('div');
+            const destination = document.getElementById('cart').firstChild;
+            destination.remove(element);
+            console.log('I removed a div');
+        }
+        // function that clear a div when clicking a button
+        function clearAllDivs()
+        {
+            const element = document.getElementsByTagName('div');
+            const destination = document.getElementById('cart');
+            destination.remove(element);
+            console.log('I removed alls div');
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -14,16 +14,14 @@
   
   
     <script>
-    let todo1 = 'Get Groceries';
-    let todo2 = 'Wash car';
-    let todo3 = 'Make dinner';
-    let todos = ['Get Groceries', 'Wash Car','Make Dinner'];
+
+    const todos = ['Get Groceries', 'Wash Car','Make Dinner'];
         
     render();
 
     function addTodo(){
-        let textbox = document.getElementById('todo-title');
-        let title = textbox.value;
+        const textbox = document.getElementById('todo-title');
+        const title = textbox.value;
         todos.push(title);
         render();
 
@@ -35,9 +33,9 @@
         document.getElementById('todo-list').innerHTML='';
 
         todos.forEach(function(todoTitle){
-        let element = document.createElement('div');
+        const element = document.createElement('div');
         element.innerText= todoTitle;
-        let todoList = document.getElementById('todo-list')
+        const todoList = document.getElementById('todo-list')
         todoList.appendChild(element);
 
     })    
