@@ -4,7 +4,9 @@
     <title>Edilmas To Do App</title>
 </head>
 <body>
+  
     <input id='todo-title' type="text"/>
+    <input id='date-picker' type="date"/>
     
     <button onclick=addTodo() >Add To Do </button>
     <div id="todo-list">
@@ -15,16 +17,48 @@
   
     <script>
 
-    const todos = ['Get Groceries', 'Wash Car','Make Dinner'];
+    const todos = [
+        {
+            title:'Get Groceries',
+            dueDate:'2022-10-04',
+            id:'id1'
+        }, 
+        {
+            title:'Wash Car',
+            dueDate:'2022-11-04',
+            id:'id2'
+        },
+        {
+            title:'Make Dinner',
+            dueDate:'2022-12-03',
+            id:'id3'
+        }];
         
     render();
 
     function addTodo(){
         const textbox = document.getElementById('todo-title');
         const title = textbox.value;
-        todos.push(title);
+        const datePicker = document.getElementById('date-picker');
+        const dueDate = datePicker.value;
+
+        const id = new Date().getTime();
+
+
+        todos.push({
+            title:title,
+            dueDate:dueDate,
+            id:id
+        });
         render();
 
+    }
+
+    function deleteTodo(event){
+        const deleteButton = even.target;
+        const idToDelete = deleteButton.id;
+        
+        console.log(event);
     }
 
     function render()
@@ -32,9 +66,17 @@
         //reset the list to be empty
         document.getElementById('todo-list').innerHTML='';
 
-        todos.forEach(function(todoTitle){
+        todos.forEach(function(todo){
         const element = document.createElement('div');
-        element.innerText= todoTitle;
+        element.innerText= todo.title + ' ' + todo.dueDate;
+        const deleteButton =document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.onclick = deleteTodo;
+        deleteButton.id = todo.id;
+        element.appendChild(deleteButton);
+        deleteButton.style = 'margin-left:12px';
+
+
         const todoList = document.getElementById('todo-list')
         todoList.appendChild(element);
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Total</title>
+</head>
+<body>
+    <div id = 'receipt' ></div>
+    
+    <script>
+        const groceries =[
+            {
+                name:'Apple',
+                price:4,
+                quantity:2
+            },
+            {
+                name:'Orange',
+                price:3,
+                quantity:3
+            },
+            {
+                name:'Bananas',
+                price:5,
+                quantity:2
+            }]
+
+
+        function carTotal(array){
+            let total = 0;
+            
+            array.forEach(element => {
+                total = total + (element.price * element.quantity); 
+                //console.log(element.name);
+            });
+            console.log (total);
+            }
+            
+            
+        const display = document.getElementById('receipt');
+        
+        function displayReceipt(array){
+
+            document.getElementById('receipt').innerHTML= '';
+
+           
+            array.forEach(function(element) {
+                const divElement = document.createElement('div');
+                let content = element.name +"  $"+ element.price + " =  $" + (element.price * element.quantity)
+                divElement.innerText = content
+                display.appendChild(divElement);
+            })
+            let total = 0;
+           array.forEach(element => {
+                total = total + (element.price * element.quantity); 
+                //console.log(element.name);
+            });
+           
+            const disTotal = document.createElement('div');
+
+
+            //const total = carTotal(array)
+            disTotal.innerText = "Car total = $" + total;
+       
+            
+           display.appendChild(disTotal) 
+
+        }
+
+        carTotal(groceries)
+        displayReceipt(groceries);
+
+    </script>
+</body>
+</html>
