@@ -8,6 +8,19 @@
 </head>
 <body>
     <script>
+        const vegetables =[ {
+            name:'Apple',
+            color:'Red',
+           
+        },
+        {
+            name:'Brocoli',
+            color:'Green',
+        },
+        {
+            name:'Carrot',
+            color:'Orange',
+        }];
 
 //        const temp = [20,-15,-23,25,30,35,1,-15,-28];
 //         function AboveFreezing (arr) {
@@ -18,31 +31,16 @@
 //             return aboveTremps;
 //         }
 //  aboveTremps(temp);
-                
-    const foodArray =[{
-                name:'Apple',
-                color:'red',
-                    }, 
-                    {
-                name:'avocado',
-                color:'green',
-                    },
-            {   name:'Egg',
-                color:'white',
-            }]
-     function OnlyRed (foodArray){
-        return foodArray.filter(function (food){
+function removeRed(foodArray) {
+  // Instead of saving the filtered array in a variable,
+  // we can return it in the same line.
+  return foodArray.filter(function (food) {
+    return food.color !== 'red';
+  });
+}
+removeRed([{ name: 'Apple', color: 'red' }, { name: 'Egg', color: 'white' }]);
 
-            return foodArray.color==='red';
-        });
-
-            
-
-        
-     }
-
-     OnlyRed(foodArray);
-
+    
            
     </script>
     

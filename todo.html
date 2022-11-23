@@ -17,7 +17,7 @@
   
     <script>
 
-    const todos = [
+    let todos = [
         {
             title:'Get Groceries',
             dueDate:'2022-10-04',
@@ -60,16 +60,23 @@
     }
 
     function deleteTodo(event){
-        const deleteButton = even.target;
+        const deleteButton = event.target;
         const idToDelete = deleteButton.id;
         
-        console.log(event);
-    }
+        todos = todos.filter(function(todo){
+            if (todo.id === idToDelete){
+                return false;
+            }
+            else{
+                return true;
+            };
 
-    todo.filter(function()
-    {
+        });
+        render();
         
-    })
+    }
+ 
+
 
     function render()
     {
