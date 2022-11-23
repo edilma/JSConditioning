@@ -21,7 +21,48 @@
         }
         return max
     }
+
+    function pickFruits(arr){
+        let count =0;
+        const theArr = arr.filter(function (item) {
+            if (count<3) {
+                if (item==='apple') {
+                    count++;
+                   return false; 
+                }
+                else{
+                    return true;
+                }   
+            }
+            else{
+                return true;
+            } 
+        })
+        return theArr;
+        
+        
+    }
     
+function pickApples2(fruitArray) {
+  let applesPicked = 0;
+
+  const filteredArray = fruitArray.filter(function (fruit) {
+    if (applesPicked >= 2) {
+      // Remember, returning true keeps this value in the array.
+      return true;
+    } else if (fruit === 'apple') {
+      applesPicked = applesPicked + 1;
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  return filteredArray;
+}
+const answer = pickApples2(['cherry', 'apple', 'orange', 'apple', 'banana', 'apple']);
+console.log (answer);
+
 </script>    
 </body>
 </html>

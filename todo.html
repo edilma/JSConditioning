@@ -4,7 +4,7 @@
     <title>Edilmas To Do App</title>
 </head>
 <body>
-  
+    <input id='todo-check' type="checkbox" value=false/>
     <input id='todo-title' type="text"/>
     <input id='date-picker' type="date"/>
     
@@ -16,7 +16,7 @@
   
   
     <script>
-
+// MODEL SECTION
     let todos = [
         {
             title:'Get Groceries',
@@ -38,31 +38,38 @@
             dueDate:'2022-12-03',
             id:'id4'
         }];
-        
-    render();
 
-    function addTodo(){
-        const textbox = document.getElementById('todo-title');
-        const title = textbox.value;
-        const datePicker = document.getElementById('date-picker');
-        const dueDate = datePicker.value;
-
-        const id = new Date().getTime();
-
+        // Creates a todo
+    function createTodo(title, dueDate)
+    {
+        const id = ''+ new Date().getTime();
+        const isDone= false;
 
         todos.push({
             title:title,
             dueDate:dueDate,
+            isDone:false,
             id:id
         });
-        render();
+       }
+       render();
 
-    }
 
-    function deleteTodo(event){
-        const deleteButton = event.target;
-        const idToDelete = deleteButton.id;
+       // put the check to the todos
+
+       function checkBoxTodos(){
         
+        todos.push(
+            {
+
+            }
+        )
+
+
+       }
+
+    // Delete a todo
+    function removeTodo(idToDelete){
         todos = todos.filter(function(todo){
             if (todo.id === idToDelete){
                 return false;
@@ -70,14 +77,55 @@
             else{
                 return true;
             };
-
         });
+    }
+
+
+// check when done
+function completeTask(value){
+   const checks= todos= todos.filter(function(){
+        if (value===true) {
+        return true;
+    }
+    else{return false}
+    })
+    render();
+    
+    
+}
+
+
+     
+//CONTROLLER SECTION
+// Add a todo 
+    function addTodo(){
+        const textbox = document.getElementById('todo-title');
+        const title = textbox.value;
+        const datePicker = document.getElementById('date-picker');
+        const dueDate = datePicker.value;
+        createTodo(title,dueDate);
         render();
-        
+    }
+// delete a todo
+    function deleteTodo(event){
+        const deleteButton = event.target;
+        const idToDelete = deleteButton.id;
+        removeTodo(idToDelete);
+        render(); 
     }
  
+    //check that the todo is done
 
+    function checkTodo(){
+        const checkbox = document.getElementById(todo-check);
+        const doneCheck = checkbox.value;
+        completeTask(doneCheck);
+        render();
 
+    }
+ 
+ //VIEW SECTION
+    // render a todo
     function render()
     {
         //reset the list to be empty
