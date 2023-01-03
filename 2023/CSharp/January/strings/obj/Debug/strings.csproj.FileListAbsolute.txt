@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\bin\Debug\strings.exe.config
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\bin\Debug\strings.exe
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\bin\Debug\strings.pdb
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\obj\Debug\strings.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\obj\Debug\strings.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\obj\Debug\strings.exe
+C:\Users\edilm\OneDrive\Desktop\Code\2023\CSharp\January\strings\obj\Debug\strings.pdb
