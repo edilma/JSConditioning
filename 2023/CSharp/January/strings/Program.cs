@@ -15,12 +15,41 @@ namespace strings
             //Console.WriteLine(Disemvowel2(word));
             //int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
             //Console.WriteLine(CreatePhoneNumber(numbers));
+            //Console.WriteLine(evaporator(10, 10, 5));
+            List<object> mylist = new List<object> { 1, 2, "a", "b" };
+            IEnumerable<int> answer = GetIntegersFromList2(mylist);
 
-            Console.WriteLine(evaporator(10, 10, 5));
+            foreach (int item in answer)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
 
             Console.ReadLine();
         }
-        //best practice evaporator 
+        //best practice
+        public static IEnumerable<int> GetIntegersFromList2(List<object> listOfItems)
+        {
+            return listOfItems.OfType<int>();
+        }
+
+        public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+        {
+            int num = 9;
+            List<int> mylist = new List<int>();
+            foreach (var item in listOfItems)
+            {
+                if (item.GetType()== num.GetType())
+                {
+                    mylist.Add((int)item);
+                }
+            }
+            return mylist;
+        }
+
         public static int evaporator2(double content, double evap_per_day, double threshold)
         {
             int days = 0;
@@ -36,6 +65,7 @@ namespace strings
            
         }
 
+        //best practice evaporator 
         public static int evaporator(double content, double evap_per_day, double threshold)
         {
             return (int)Math.Ceiling(Math.Log(threshold / 100.0) / Math.Log(1.0 - evap_per_day / 100.0));
