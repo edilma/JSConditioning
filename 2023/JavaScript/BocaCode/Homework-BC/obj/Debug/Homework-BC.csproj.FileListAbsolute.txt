@@ -1,0 +1,7 @@
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\bin\Debug\Homework-BC.exe.config
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\bin\Debug\Homework-BC.exe
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\bin\Debug\Homework-BC.pdb
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\obj\Debug\Homework-BC.csproj.AssemblyReference.cache
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\obj\Debug\Homework-BC.csproj.CoreCompileInputs.cache
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\obj\Debug\Homework-BC.exe
+C:\Users\edilm\OneDrive\Desktop\Code\2023\JavaScript\BocaCode\Homework-BC\obj\Debug\Homework-BC.pdb
