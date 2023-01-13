@@ -8,7 +8,6 @@ function countOddNumbers(list) {
         if (list[index]%2 !=0) {
             newArray.push(list[index]);
         }
-        // Your answer goes here...
     }
     return newArray;
   }
